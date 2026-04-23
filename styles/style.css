@@ -1,14 +1,20 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+.header__title,
+.header__text,
+.section-title,
+.card-title,
+.card-text,
+.section-intro,
+.gallery-title,
+.footer-title {
+  margin: 0;
+}
 
 .page {
   background-color: var(--bg-color);
-  background-image: var(--bg-image);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
   font-family: var(--main-font);
   color: var(--text-color);
+  margin: 0;
 }
 
 .header {
@@ -18,6 +24,10 @@
   min-height: 668px;
   padding: 10px;
   grid-template-rows: 1fr min-content 1fr;
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .header__theme-menu {
@@ -221,6 +231,8 @@
   .main {
     padding-left: 20px;
     padding-right: 20px;
+    padding-top: 60px;
+    gap: 80px;
   }
 
   .content-section-columns {
@@ -255,6 +267,9 @@
 
   .gallery-title {
     grid-column: span 3;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23.4px;
   }
 
   .gallery-image {
@@ -283,16 +298,44 @@
     grid-column: span 2;
     grid-row: span 2;
   }
+
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .header__rec {
+    top: 21px;
+    right: 48.5px;
+  }
+
+  .header__theme-menu {
+    margin-right: 3px;
+  }
+  .header__title {
+    margin-top: 3px;
+    margin-left: -19px;
+  }
+  .footer-title {
+    transform: translateY(19px);
+  }
 }
 
 @media (width >= 1024px) {
   .header__theme-menu {
     justify-self: center;
     align-self: start;
+    top: -2px;
   }
 
   .header__theme-menu-list {
     flex-direction: row;
+    gap: 12px;
   }
 
   .header__rec {
@@ -322,12 +365,39 @@
   .attention-section .card-title {
     align-self: start;
   }
-
-  .gallery {
-    margin-top: 30px;
+  .main {
+    gap: 80px;
+    padding-top: 60px;
   }
 
   .header__text {
     max-width: 491px;
+  }
+
+  .header__title {
+    font-size: 157px;
+    margin-left: -20px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .footer-title {
+    font-size: 157px;
+    place-items: center;
+    margin: 0;
+    transform: translateY(18px);
+  }
+
+  .attention-section .section-list {
+    align-items: start;
+  }
+
+  .gallery-title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23.4px;
   }
 }
