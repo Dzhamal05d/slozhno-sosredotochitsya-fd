@@ -360,6 +360,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
+    align-items: start;
   }
 
   .attention-section .card-title {
@@ -389,10 +390,6 @@
     place-items: center;
     margin: 0;
     transform: translateY(18px);
-  }
-
-  .attention-section .section-list {
-    align-items: start;
   }
 
   .gallery-title {
