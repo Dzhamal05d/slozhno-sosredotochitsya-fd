@@ -1,20 +1,9 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-.header__title,
-.header__text,
-.section-title,
-.card-title,
-.card-text,
-.section-intro,
-.gallery-title,
-.footer-title {
-  margin: 0;
-}
-
 .page {
   background-color: var(--bg-color);
   font-family: var(--main-font);
   color: var(--text-color);
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1024px;
   background-attachment: fixed;
 }
 
@@ -45,7 +34,7 @@
 .header__title {
   color: var(--title-color);
   font-weight: 700;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: clamp(7.25rem, 5.77rem + 6.32vw, 9.8125rem);
   text-shadow: 4px 4px 0 var(--accent-color);
   line-height: 83%;
 }
@@ -165,19 +154,13 @@
 
 .card-title {
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 700;
   line-height: 23.4px;
 }
 
 .card-text {
   font-size: 18px;
   color: var(--text-color);
-  line-height: 23.4px;
-}
-
-.section-intro {
-  font-size: 18px;
-  font-weight: 700;
   line-height: 23.4px;
 }
 
@@ -208,7 +191,7 @@
 
 .footer-title {
   color: var(--title-color);
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: clamp(7.25rem, 5.77rem + 6.32vw, 9.8125rem);
   font-weight: 700;
   line-height: 82.5%;
   text-shadow: 2px 2px 0 var(--accent-color);
@@ -218,6 +201,18 @@
   color: inherit;
   text-shadow: 2px 2px 0 var(--accent-color);
   text-decoration: none;
+}
+
+.card-text a:hover {
+  border-bottom: 1px solid currentColor;
+}
+
+.card-text a:focus {
+  outline: none;
+}
+
+.card-text a:focus-visible {
+  outline: 1px solid currentColor;
 }
 
 @media (width >= 768px) {
@@ -239,6 +234,7 @@
   .content-section-columns {
     grid-template-columns: 236px 1fr;
   }
+
   .content-section-columns .section-intro {
     grid-column: 2;
     align-self: start;
@@ -268,16 +264,11 @@
 
   .gallery-title {
     grid-column: span 3;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 23.4px;
   }
 
   .gallery-image {
-    width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
   }
 
   .gallery-image-sunset {
@@ -358,18 +349,12 @@
   }
 
   .attention-section .section-list {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
     align-items: start;
   }
 
   .attention-section .card-title {
     align-self: start;
-  }
-  .main {
-    gap: 80px;
-    padding-top: 60px;
   }
 
   .header__text {
@@ -377,7 +362,6 @@
   }
 
   .header__title {
-    font-size: 157px;
     margin-left: -20px;
   }
 
@@ -387,15 +371,9 @@
   }
 
   .footer-title {
-    font-size: 157px;
     place-items: center;
     margin: 0;
     transform: translateY(18px);
   }
 
-  .gallery-title {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 23.4px;
-  }
 }
