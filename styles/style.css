@@ -158,6 +158,10 @@
   line-height: 23.4px;
 }
 
+.tips-section .section-item .card-title {
+  font-weight: 400;
+}
+
 .card-text {
   font-size: 18px;
   color: var(--text-color);
@@ -243,6 +247,7 @@
   .content-section-columns .section-list {
     grid-column: 2;
   }
+
   .title-size {
     max-width: 236px;
   }
@@ -309,10 +314,12 @@
   .header__theme-menu {
     margin-right: 3px;
   }
+
   .header__title {
     margin-top: 3px;
     margin-left: -19px;
   }
+  
   .footer-title {
     transform: translateY(19px);
   }
@@ -375,5 +382,4 @@
     margin: 0;
     transform: translateY(18px);
   }
-
 }
